@@ -35,8 +35,8 @@
 - 本日の授業では，エッジAIを用いた演習を行います．
   - [ImageNetを用いた画像の分類](classify.md)
   - [ライブカメラでの画像認識](live_camera_classify.md)
-  - [画像領域の検出](contents/detect.md)
-  - [ライブカメラでの画像領域の検出](contens/live_camera_detection.md)
+  - [画像領域の検出](detect.md)
+  - [ライブカメラでの画像領域の検出](live_camera_detection.md)
   - []
 
 
