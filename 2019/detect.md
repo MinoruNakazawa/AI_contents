@@ -46,3 +46,33 @@ $ ./detectnet-console.py --network=coco-dog images/dog_3.jpg output_1.jpg
 ```
 ![いぬたち](images/detectnet-tensorRT-dog-0.jpg)
 
+```bash
+# C++
+$ ./detectnet-console --network=coco-bottle images/bottle_0.jpg output_2.jpg
+
+# Python
+$ ./detectnet-console.py --network=coco-bottle images/bottle_0.jpg output_2.jpg
+```
+
+![ペットボトル](images/detectnet-tensorRT-bottle-0.jpg)
+
+```bash
+# C++
+$ ./detectnet-console --network=coco-airplane images/airplane_1.jpg output_3.jpg 
+
+# Python
+$ ./detectnet-console.py --network=coco-airplane images/airplane_1.jpg output_3.jpg
+```
+![ひこうき](images/detectnet-tensorRT-airplane-0.jpg)
+
+### 複数の物体検出モデル
+一部のモデルは、複数のタイプのオブジェクトの検出をサポートしています。たとえば、歩行者に加えて荷物または手荷物を含む画像で複数足モデルを使用する場合、2番目のオブジェクトクラスは緑のオーバーレイでレンダリングされます。
+
+``` bash
+# C++
+$ ./detectnet-console --network=multiped peds-003.jpg output_4.jpg
+
+# Python
+$ ./detectnet-console.py --network=multiped peds-003.jpg output_4.jpg
+```
+![](images/detectnet-peds-01.jpg)
