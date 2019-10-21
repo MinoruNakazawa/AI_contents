@@ -10,11 +10,13 @@ $ cd dogscatsmodel
 $ tar -xzf ~/Downloads/2019～～.tar.gz 		#ダウンロードしたファイル名
 $ ls
 ```
+
 - ※ダウンロードした学習モデルを展開しています
 - ※ここで表示される snapshot～～.caffemodelというファイル(学習済みモデル本体)のファイル名を確認しておいて下さい
 
 ### プロンプトから以下のコマンドを入力して下さい。
 - ※３行目～５行目はまとめて１行です
+
 ```
 $ cd ~/jetson-inference/build/aarch64/bin
 
@@ -23,12 +25,14 @@ $ export NET=~/dogscatsmodel
 $ ./imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NETsnapshot_iter_～～.caffemodel --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
 ```
 
+
 - ※「snapshot_iter_～～」は上の手順で確認したファイル名です
 - ※ダウンロードした学習モデルを使ってカメラ映像をリアルタイムに推論するようにパラメタ指定しています
 - ※初回はニューラルネットワークモデルの最適化が行われるため起動に時間がかかります
 
 
 ## GPIOの制御
+
 - JetsonにはGPIO端子があり、LEDやサーボモータ等の電子回路を簡単に制御できます。このため、「AIで識別した結果に応じて電子回路を制御する」をエッジ側で完結させる、いわゆるエッジコンピューティングを手軽に試すことができます。
 - そこで、今回のハンズオンの最後の作業として、カメラ画像の識別結果(犬か猫か)に応じて２つのLEDを点灯させるように先ほどのサンプルプログラムを書き換えます。
 - なお、JetsonのGPIO制御は、Raspberry Piなどと同様にファイルシステムの一部として制御できます(特定のファイル(パス)に１を書き込むとGPIOのピンに電気が流れるなど)ので簡単です。
