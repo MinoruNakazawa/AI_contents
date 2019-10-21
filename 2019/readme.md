@@ -37,6 +37,8 @@
   - [ライブカメラでの画像認識](live_camera_classify.md)
   - [画像領域の検出](detect.md)
   - [ライブカメラでの画像領域の検出](live_camera_detection.md)
-  - []
+
+- 拡張編
+  - [犬と猫の学習](extension.md)
 
 
