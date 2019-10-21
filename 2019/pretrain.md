@@ -4,11 +4,11 @@
 - [トレーニング済みのデータ](pretrain/20190128-065516-bff9_epoch_31.0.tar.gz)
 
 ```
-cd
-mkdir dogscatsmodel
-cd dogscatsmodel
-tar -xzf ~/Downloads/2019～～.tar.gz 		#ダウンロードしたファイル名
-ls
+$ cd
+$ mkdir dogscatsmodel
+$ cd dogscatsmodel
+$ tar -xzf ~/Downloads/2019～～.tar.gz 		#ダウンロードしたファイル名
+$ ls
 ```
 - ※ダウンロードした学習モデルを展開しています
 - ※ここで表示される snapshot～～.caffemodelというファイル(学習済みモデル本体)のファイル名を確認しておいて下さい
