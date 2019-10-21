@@ -46,9 +46,11 @@ $ ./imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NETsnapshot_iter_�
 ###  GPIOのピン有効化と動作確認
 
 - プロンプトから以下のコマンドを入力し、２つのピンをデジタル出力用として有効化します
+
 ```
 $ sudo su  # password は，qwer1234
 ```
+
 ```
 $ cd /sys/class/gpio/
 $ echo 393 > export 			# gpio393 を有効化
@@ -100,6 +102,7 @@ other
 
 ### imagenet_cameraのソースコード修正とビルド・動作確認
 - プロンプトから以下のコマンドを入力して下さい。
+
 ```
 $ cd ~/jetson-inference/examples/imagenet-camera 	# ソースコードはここにあります
 $ cp imagenet-camera.cpp imagenet-camera.bak 		# バックアップ
@@ -107,6 +110,7 @@ $ vi imagenet-camera.cpp 		# エディタ起動
 ```
 
 - プログラムコードに以下の処理を追加します(143行目の後。～ = net->Classify(～); の後。)
+
 ```
 FILE *bluePin = fopen("/sys/class/gpio/gpio393/value","w");	//gpio393ピン
 FILE *yellowPin = fopen("/sys/class/gpio/gpio394/value","w");	//gpio394ピン
@@ -119,12 +123,14 @@ fclose(yellowPin);								//gpio394を閉じる
 ```
 
 - プロンプトから以下のコマンドを入力してソースコードをビルドします。
+
 ```
 $ cd ~/jetson-inference/build
 $ make
 ```
 
 - プロンプトから以下のコマンドを入力して動作確認して下さい
+
 ```
 $ cd ~/jetson-inference/build/aarch64/bin
 $ export NET=~/dogscatsmodel
