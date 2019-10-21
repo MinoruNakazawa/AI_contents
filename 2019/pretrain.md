@@ -81,7 +81,7 @@ const int img_class = net->Classify(imgRGBA, camera->GetWidth(), camera->GetHeig
 
 - この処理によって実行時に指定した学習済みモデルによってカメラ画像が推論され、結果が img_class変数に代入されます。
 - img_classに代入されるのは「dogs」や「cats」といった文字列(ラベル)ではなく、「0」や「1」などの数値です。
-- 数値とラベルの対応は、作業９で展開したファイルに入っている labels.txt を見れば分かります。
+- 数値とラベルの対応は、上記で展開したファイルに入っている labels.txt を見れば分かります。
 
 ```
 cats
