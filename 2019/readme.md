@@ -39,6 +39,7 @@
   - [ライブカメラでの画像領域の検出](live_camera_detection.md)
 
 - 拡張編
-  - [犬と猫の学習](extension.md)
+  - [犬と猫の学習(Jetson)](extension.md)
+  - [犬と猫の学習(pretrain)](pretrain.md)
 
 
