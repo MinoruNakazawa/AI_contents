@@ -43,28 +43,28 @@ $ ./imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NETsnapshot_iter_�
 
 - プロンプトから以下のコマンドを入力し、２つのピンをデジタル出力用として有効化します
 ```
-sudo su  # password は，qwer1234
+$ sudo su  # password は，qwer1234
 ```
 ```
-cd /sys/class/gpio/
-echo 393 > export 			# gpio393 を有効化
-echo 394 > export 			# gpio394 も有効化
-echo out > gpio393/direction 	# gpio393 を出力モードに設定
-echo out > gpio394/direction 	# gpio394 も出力モードに設定
-chmod 666 gpio393/value 		# gpio393 のON/OFFを誰でもできるように変更
-chmod 666 gpio394/value 		# gpio394 のON/OFFも誰でもできるように変更
+$ cd /sys/class/gpio/
+$ echo 393 > export 			# gpio393 を有効化
+$ echo 394 > export 			# gpio394 も有効化
+$ echo out > gpio393/direction 	# gpio393 を出力モードに設定
+$ echo out > gpio394/direction 	# gpio394 も出力モードに設定
+$ chmod 666 gpio393/value 		# gpio393 のON/OFFを誰でもできるように変更
+$ chmod 666 gpio394/value 		# gpio394 のON/OFFも誰でもできるように変更
 
-exit
+$ exit
 ```
 
 - プロンプトから以下のコマンドを入力し、ＬＥＤの点灯・消灯の動作を確認します
 
 ```
-cd /sys/class/gpio/
-echo 1 > gpio393/value 		# gpio393 をONにする(青LEDが光るはず)
-echo 0 > gpio393/value 		# gpio393 をOFFにする(青LEDが消えるはず)
-echo 1 > gpio394/value 		# gpio394 をONにする(黄LEDが光るはず)
-echo 0 > gpio394/value 		# gpio394 をOFFにする(黄LEDが消えるはず)
+$ cd /sys/class/gpio/
+$ echo 1 > gpio393/value 		# gpio393 をONにする(青LEDが光るはず)
+$ echo 0 > gpio393/value 		# gpio393 をOFFにする(青LEDが消えるはず)
+$ echo 1 > gpio394/value 		# gpio394 をONにする(黄LEDが光るはず)
+$ echo 0 > gpio394/value 		# gpio394 をOFFにする(黄LEDが消えるはず)
 ```
 
 - ※うまく光らなかったら回路を見直して下さい
