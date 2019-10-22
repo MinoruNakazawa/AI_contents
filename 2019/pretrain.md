@@ -22,7 +22,7 @@ $ cd ~/jetson-inference/build/aarch64/bin
 
 $ export NET=~/dogscatsmodel
 
-$ ./imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NETsnapshot_iter_～～.caffemodel --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
+$ ./imagenet-camera --prototxt=$NET/deploy.prototxt --model=$NET/snapshot_iter_～～.caffemodel --labels=$NET/labels.txt --input_blob=data --output_blob=softmax
 ```
 
 
